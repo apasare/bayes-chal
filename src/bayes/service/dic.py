@@ -4,7 +4,7 @@ import pickle
 from dependency_injector import containers, providers
 
 from .rabbitmq import RabbitMQClient
-from .prediction_model import PredictionModel
+from .predictor import Predictor
 
 
 # Dependency Injection Container
@@ -26,4 +26,4 @@ class DIC(containers.DeclarativeContainer):
 
     # model
     prediction_model = providers.Singleton(
-        PredictionModel, file_path=config.prediction_model, logger=logger)
+        Predictor, file_path=config.prediction_model, logger=logger)

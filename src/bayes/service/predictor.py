@@ -1,7 +1,7 @@
 import pickle
 
 
-class PredictionModel(object):
+class Predictor(object):
     def __init__(self, file_path, logger):
         self.logger = logger
         with open(file_path, 'rb') as file:

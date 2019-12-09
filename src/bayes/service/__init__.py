@@ -1,3 +1,3 @@
 from .dic import DIC
-from .prediction_model import PredictionModel
+from .predictor import Predictor
 from .rabbitmq import RabbitMQClient

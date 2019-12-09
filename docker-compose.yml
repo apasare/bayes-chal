@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    environment:
+        # RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+        RABBITMQ_DEFAULT_USER: "bayes"
+        RABBITMQ_DEFAULT_PASS: "bayes"
+        RABBITMQ_DEFAULT_VHOST: "bayes"
+    ports:
+        - "8080:15672"
+        - "5672:5672"

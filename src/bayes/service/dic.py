@@ -26,4 +26,4 @@ class DIC(containers.DeclarativeContainer):
 
     # model
     prediction_model = providers.Singleton(
-        PredictionModel, file_path=config.prediction_model)
+        PredictionModel, file_path=config.prediction_model, logger=logger)
